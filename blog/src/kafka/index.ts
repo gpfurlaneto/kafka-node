@@ -39,12 +39,6 @@ export async function produceMessage(topic: string, message: any){
   const producer = kafka.producer()
 
   await producer.connect()
-  // console.log('mandando', {
-  //   topic,
-  //   messages: [
-  //     { value: JSON.stringify(message)}
-  //   ]
-  // })
   const result = await producer.send({
     topic,
     messages: [
