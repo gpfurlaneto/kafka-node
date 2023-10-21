@@ -1,11 +1,5 @@
 version: '3'
 services:
-  mongodb:
-    image: mongo
-    ports:
-      - '27017:27017'
-    volumes:
-      - dbdata:/data/db
   broker:
     image: confluentinc/cp-kafka:7.5.0
     container_name: broker
@@ -27,6 +21,3 @@ services:
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
       CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
-      
-volumes:
-  dbdata:

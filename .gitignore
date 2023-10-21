@@ -5,3 +5,7 @@
 /blog/dist
 /blog/node_modules
 /blog/.env
+
+/comments/dist
+/comments/node_modules
+/comments/.env
